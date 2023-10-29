@@ -13,6 +13,91 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.white),
       home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          child: Image.network(
+              'https://astrapay.com/static-assets/images/qris/icon/icon_scan_qris.png'),
+          onPressed: () {},
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: BottomAppBar(
+          shape: CircularNotchedRectangle(),
+          notchMargin: 10,
+          child: Container(
+            height: 60,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    MaterialButton(
+                      minWidth: 40,
+                      onPressed: () {},
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.home, color:const Color.fromARGB(255, 222, 41, 28)),
+                          Text(
+                            'Home',
+                            style: TextStyle(color:const Color.fromARGB(255, 222, 41, 28)),
+                          )
+                        ],
+                      ),
+                    ),
+                    MaterialButton(
+                      minWidth: 40,
+                      onPressed: () {},
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.fact_check_outlined, color: Colors.black),
+                          Text(
+                            'History',
+                            style: TextStyle(color: Colors.black),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+                Row(
+                  // Right Row
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    MaterialButton(
+                      minWidth: 40,
+                      onPressed: () {},
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.inbox_outlined, color: Colors.black),
+                          Text(
+                            'Inbox',
+                            style: TextStyle(color: Colors.black),
+                          )
+                        ],
+                      ),
+                    ),
+                    MaterialButton(
+                      minWidth: 40,
+                      onPressed: () {},
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.perm_identity, color: Colors.black),
+                          Text(
+                            'Profile',
+                            style: TextStyle(color: Colors.black),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
         body: Container(
           color: Colors.white,
           child: Column(
@@ -51,7 +136,7 @@ class MyApp extends StatelessWidget {
               padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.red,
+                color: const Color.fromARGB(255, 222, 41, 28),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,7 +174,7 @@ class MyApp extends StatelessWidget {
                                     Container(
                                       margin: const EdgeInsets.only(left: 10),
                                       decoration: BoxDecoration(
-                                        color: Colors.red,
+                                        color: const Color.fromARGB(255, 222, 41, 28),
                                         borderRadius: BorderRadius.circular(25),
                                       ),
                                       child: const Icon(
@@ -128,7 +213,7 @@ class MyApp extends StatelessWidget {
                                     Container(
                                       margin: const EdgeInsets.only(left: 10),
                                       decoration: BoxDecoration(
-                                        color: Colors.red,
+                                        color:const Color.fromARGB(255, 222, 41, 28),
                                         borderRadius: BorderRadius.circular(25),
                                       ),
                                       child: const Icon(
@@ -165,7 +250,7 @@ class MyApp extends StatelessWidget {
                       Column(
                         children: [
                           const Icon(
-                            Icons.account_balance_wallet,
+                            Icons.account_balance_wallet_outlined,
                             size: 30,
                           ),
                           Container(
@@ -183,7 +268,7 @@ class MyApp extends StatelessWidget {
                       Column(
                         children: [
                           const Icon(
-                            Icons.send,
+                            Icons.send_outlined,
                             size: 30,
                           ),
                           Container(
@@ -201,7 +286,7 @@ class MyApp extends StatelessWidget {
                       Column(
                         children: [
                           const Icon(
-                            Icons.airplane_ticket_sharp,
+                            Icons.airplane_ticket_outlined,
                             size: 30,
                           ),
                           Container(
@@ -219,7 +304,7 @@ class MyApp extends StatelessWidget {
                       Column(
                         children: [
                           const Icon(
-                            Icons.dashboard,
+                            Icons.dashboard_outlined,
                             size: 30,
                           ),
                           Container(
@@ -245,6 +330,7 @@ class MyApp extends StatelessWidget {
                         const Icon(
                           Icons.phone_android,
                           size: 30,
+                          color:const Color.fromARGB(255, 222, 41, 28),
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 10),
@@ -263,6 +349,7 @@ class MyApp extends StatelessWidget {
                         const Icon(
                           Icons.flash_on,
                           size: 30,
+                          color:const Color.fromARGB(255, 222, 41, 28),
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 10),
@@ -281,6 +368,7 @@ class MyApp extends StatelessWidget {
                         const Icon(
                           Icons.local_hospital,
                           size: 30,
+                          color:const Color.fromARGB(255, 222, 41, 28),
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 10),
@@ -299,6 +387,7 @@ class MyApp extends StatelessWidget {
                         const Icon(
                           Icons.games_sharp,
                           size: 30,
+                          color:const Color.fromARGB(255, 222, 41, 28),
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 10),
@@ -322,6 +411,7 @@ class MyApp extends StatelessWidget {
                         const Icon(
                           Icons.tv,
                           size: 30,
+                          color: const Color.fromARGB(255, 222, 41, 28),
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 10),
@@ -340,6 +430,7 @@ class MyApp extends StatelessWidget {
                         const Icon(
                           Icons.water_drop,
                           size: 30,
+                          color:const Color.fromARGB(255, 222, 41, 28),
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 10),
@@ -358,6 +449,7 @@ class MyApp extends StatelessWidget {
                         const Icon(
                           Icons.card_membership,
                           size: 30,
+                          color:const Color.fromARGB(255, 222, 41, 28),
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 10),
@@ -376,6 +468,7 @@ class MyApp extends StatelessWidget {
                         const Icon(
                           Icons.more_horiz_sharp,
                           size: 30,
+                          color:const Color.fromARGB(255, 222, 41, 28),
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 10),
