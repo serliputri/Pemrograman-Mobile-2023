@@ -46,72 +46,350 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Container(
-                width: 380,
-                height: 180,
-                margin: EdgeInsets.only(top: 30),
-                child: Card(
-                  elevation: 2,
-                  color: Colors.redAccent,
-                  child: Padding(
-                    padding:
-                        EdgeInsets.all(16.0), // Adjust the padding as needed
-                    child: Column(
+              width: 380,
+              margin: const EdgeInsets.only(top: 10),
+              padding: const EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.red,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Hi, SERLI PUTRI MAHARANI',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 15),
+                    child: Row(
                       children: [
-                        Align(
-                          alignment: AlignmentDirectional.topStart,
-                          child: Text(
-                            'Hi, SERLI PUTRI MAHARANI',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                        Container(
+                          padding: const EdgeInsets.all(20),
+                          margin: const EdgeInsets.only(right: 10),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Your Balance'),
+                              Container(
+                                margin: const EdgeInsets.only(top: 10),
+                                child: Row(
+                                  children: [
+                                    const Text(
+                                      'Rp 10.184',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 15,
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: const EdgeInsets.only(left: 10),
+                                      decoration: BoxDecoration(
+                                        color: Colors.red,
+                                        borderRadius: BorderRadius.circular(25),
+                                      ),
+                                      child: const Icon(
+                                        Icons.arrow_right_alt,
+                                        size: 20,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        Row(
-                          children: [
-                            Card(
-                              elevation: 2,
-                              color: Colors.white,
-                              child: Padding(
-                                padding: EdgeInsets.all(16.0),
-                                child: Align(
-                                  alignment: AlignmentDirectional.topStart,
-                                  child: Text(
-                                    'Your Balance \n\t\t\tRp 10.184',
-                                    style: TextStyle(
-                                        fontSize: 15, color: Colors.black),
-                                  ),
+                        Container(
+                          padding: const EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Bonus Balance'),
+                              Container(
+                                margin: const EdgeInsets.only(top: 10),
+                                child: Row(
+                                  children: [
+                                    const Text(
+                                      '0',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 15,
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: const EdgeInsets.only(left: 10),
+                                      decoration: BoxDecoration(
+                                        color: Colors.red,
+                                        borderRadius: BorderRadius.circular(25),
+                                      ),
+                                      child: const Icon(
+                                        Icons.arrow_right_alt,
+                                        size: 20,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                            ),
-                            Card(
-                              elevation: 2,
-                              color: Colors.white,
-                              child: Padding(
-                                padding: EdgeInsets.all(16.0),
-                                child: Align(
-                                  alignment: AlignmentDirectional.topStart,
-                                  child: Text(
-                                    'Bonus Balance \n\t\t 0',
-                                    style: TextStyle(
-                                        fontSize: 15, color: Colors.black),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                                width:
-                                    50), // Add spacing between the card and other elements if needed
-                            Expanded(
-                              child: Container(
-                                  // Add additional properties for width, height, margin, etc. as needed
-                                  ),
-                            ),
-                          ],
-                        )
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
-                ),
+                ],
               ),
-            ],
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 15, bottom: 10),
+              padding: const EdgeInsets.all(10),
+              width: 370,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                      color: const Color.fromARGB(255, 206, 206, 206))),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ButtonBar(
+                    children: [
+                      Column(
+                        children: [
+                          const Icon(
+                            Icons.account_balance_wallet,
+                            size: 30,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(top: 5),
+                            child: const Text(
+                              'TopUp',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  ButtonBar(
+                    children: [
+                      Column(
+                        children: [
+                          const Icon(
+                            Icons.send,
+                            size: 30,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(top: 5),
+                            child: const Text(
+                              'Send Money',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  ButtonBar(
+                    children: [
+                      Column(
+                        children: [
+                          const Icon(
+                            Icons.airplane_ticket_sharp,
+                            size: 30,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(top: 5),
+                            child: const Text(
+                              'Ticket Code',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  ButtonBar(
+                    children: [
+                      Column(
+                        children: [
+                          const Icon(
+                            Icons.dashboard,
+                            size: 30,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(top: 5),
+                            child: const Text(
+                              'See All',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ButtonBar(
+                  children: [
+                    Column(
+                      children: [
+                        const Icon(
+                          Icons.phone_android,
+                          size: 30,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: const Text(
+                            'Pulsa/Data',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                ButtonBar(
+                  children: [
+                    Column(
+                      children: [
+                        const Icon(
+                          Icons.flash_on,
+                          size: 30,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: const Text(
+                            'Electricity',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                ButtonBar(
+                  children: [
+                    Column(
+                      children: [
+                        const Icon(
+                          Icons.local_hospital,
+                          size: 30,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: const Text(
+                            'BPJS',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                ButtonBar(
+                  children: [
+                    Column(
+                      children: [
+                        const Icon(
+                          Icons.games_sharp,
+                          size: 30,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: const Text(
+                            'mgames',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ButtonBar(
+                  children: [
+                    Column(
+                      children: [
+                        const Icon(
+                          Icons.tv,
+                          size: 30,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: const Text(
+                            'Cable TV\n & Internet',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                ButtonBar(
+                  children: [
+                    Column(
+                      children: [
+                        const Icon(
+                          Icons.water_drop,
+                          size: 30,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: const Text(
+                            'PDAM',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                ButtonBar(
+                  children: [
+                    Column(
+                      children: [
+                        const Icon(
+                          Icons.card_membership,
+                          size: 30,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: const Text(
+                            'Kartu Uang\n Elektronik',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                ButtonBar(
+                  children: [
+                    Column(
+                      children: [
+                        const Icon(
+                          Icons.more_horiz_sharp,
+                          size: 30,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: const Text(
+                            'More',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
           ),
         ),
       ),
