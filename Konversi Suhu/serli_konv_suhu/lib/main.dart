@@ -30,11 +30,6 @@ class _MyHomePageState extends State<MyHomePage> {
   double kelvin = 0.0;
   double reamur = 0.0;
 
-  void _convertTemperature() {
-    kelvin = celcius + 273.15;
-    reamur = celcius * 4 / 5;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,16 +69,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Column(
                       children: [
-                        Text("Suhu dalam Kelvin", style: TextStyle(fontSize: 14)),
+                        Text("Suhu dalam Kelvin", style: TextStyle(fontSize: 16)),
+                        Text("150", style: TextStyle(fontSize: 50)),
                         SizedBox(height: 20),
-                        Text("$kelvin", style: TextStyle(fontSize: 30)),
                       ],
                     ),
                     Column(
                       children: [
-                        Text("Suhu dalam Reamur", style: TextStyle(fontSize: 14)),
+                        Text("Suhu dalam Reamur", style: TextStyle(fontSize: 16)),
+                        Text("200", style: TextStyle(fontSize: 50)),
                         SizedBox(height: 20),
-                        Text("$reamur", style: TextStyle(fontSize: 30)),
                       ],
                     ),
                   ],
@@ -94,14 +89,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 margin: EdgeInsets.only(top: 200),
                 child: ElevatedButton(
                   onPressed: () {
-                    setState(() {
-                      _convertTemperature();
-                    });
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Colors.blue,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(3),
                     ),
                     minimumSize: Size(460, 50),
                   ),
